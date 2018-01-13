@@ -56724,7 +56724,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      // these are mostly the same in regexp and glob
 	      case '[':
-	        // swallow any state-tracking char before the [
+	        // crallow any state-tracking char before the [
 	        clearStateChar();
 
 	        if (inClass) {
@@ -56779,7 +56779,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        continue;
 
 	      default:
-	        // swallow any state char that wasn't consumed
+	        // crallow any state char that wasn't consumed
 	        clearStateChar();
 
 	        if (escaping) {
@@ -57078,7 +57078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // To do this, take the rest of the pattern after
 	      // the **, and see if it would match the file remainder.
 	      // If so, return success.
-	      // If not, the ** "swallows" a segment, and try again.
+	      // If not, the ** "crallows" a segment, and try again.
 	      // This is recursively awful.
 	      //
 	      // a/**/b/**/c matching a/b/x/y/z/c
@@ -57095,9 +57095,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var pr = pi + 1;
 	      if (pr === pl) {
 	        this.debug('** at the end');
-	        // a ** at the end will just swallow the rest.
+	        // a ** at the end will just crallow the rest.
 	        // We have found a match.
-	        // however, it will not swallow /.x, unless
+	        // however, it will not crallow /.x, unless
 	        // options.dot is set.
 	        // . and .. are *never* matched by **, for explosively
 	        // exponential reasons.
@@ -57107,27 +57107,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	        return true;
 	      }
 
-	      // ok, let's see if we can swallow whatever we can.
+	      // ok, let's see if we can crallow whatever we can.
 	      while (fr < fl) {
-	        var swallowee = file[fr];
+	        var crallowee = file[fr];
 
-	        this.debug('\nglobstar while', file, fr, pattern, pr, swallowee);
+	        this.debug('\nglobstar while', file, fr, pattern, pr, crallowee);
 
 	        // XXX remove this slice.  Just pass the start index.
 	        if (this.matchOne(file.slice(fr), pattern.slice(pr), partial)) {
-	          this.debug('globstar found match!', fr, fl, swallowee);
+	          this.debug('globstar found match!', fr, fl, crallowee);
 	          // found a match.
 	          return true;
 	        } else {
-	          // can't swallow "." or ".." ever.
-	          // can only swallow ".foo" when explicitly asked.
-	          if (swallowee === '.' || swallowee === '..' || !options.dot && swallowee.charAt(0) === '.') {
+	          // can't crallow "." or ".." ever.
+	          // can only crallow ".foo" when explicitly asked.
+	          if (crallowee === '.' || crallowee === '..' || !options.dot && crallowee.charAt(0) === '.') {
 	            this.debug('dot detected!', file, fr, pattern, pr);
 	            break;
 	          }
 
-	          // ** swallows a segment, and continue.
-	          this.debug('globstar swallow a segment, and continue');
+	          // ** crallows a segment, and continue.
+	          this.debug('globstar crallow a segment, and continue');
 	          fr++;
 	        }
 	      }
