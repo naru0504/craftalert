@@ -1,7 +1,7 @@
 {
   "name": "craftalert",
-  "version": "2.1.0",
-  "description": "A beautiful replacement for JavaScript's \"alert\"",
+  "version": "0.0.1",
+  "description": "Fork from sweetalert, A beautiful replacement for JavaScript's \"alert\"",
   "main": "dist/craftalert.min.js",
   "types": "typings/craftalert.d.ts",
   "scripts": {
