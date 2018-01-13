@@ -1,6 +1,6 @@
 <p align="center">
   <a href="http://colorfulalert.js.org">
-    <img alt="colorfulalert" src="https://github.com/t4t5/colorfulalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/logotype.png" width="300">
+    <img alt="colorfulalert" src="https://github.com/naru0504/colorfulalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/logotype.png" width="300">
   </a>
 </p>
 
@@ -10,17 +10,17 @@
 
 <p align="center">
   <a href="https://badge.fury.io/js/colorfulalert"><img src="https://badge.fury.io/js/colorfulalert.svg" alt="npm version" height="18"></a>
-  <a href="https://travis-ci.org/t4t5/colorfulalert"><img src="https://travis-ci.org/t4t5/colorfulalert.svg" alt="Build status" /><a>
+  <a href="https://travis-ci.org/naru0504/colorfulalert"><img src="https://travis-ci.org/naru0504/colorfulalert.svg" alt="Build status" /><a>
   <a href="https://www.npmjs.com/package/colorfulalert">
     <img src="https://img.shields.io/npm/dm/colorfulalert.svg" />
   </a>
-  <a href="https://github.com/t4t5/colorfulalert/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/t4t5/colorfulalert.svg" />
+  <a href="https://github.com/naru0504/colorfulalert/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/naru0504/colorfulalert.svg" />
   </a>
 </p>
 
 <p align="center">
-  <img alt="A success modal" src="https://github.com/t4t5/colorfulalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/cral.gif">
+  <img alt="A success modal" src="https://github.com/naru0504/colorfulalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/cral.gif">
 </p>
 
 

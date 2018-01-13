@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/t4t5/colorfulalert"
+    "url": "https://github.com/naru0504/colorfulalert"
   },
   "keywords": [
     "colorfulalert",
@@ -26,7 +26,7 @@
   "author": "Tristan Edwards <tristan.edwards@me.com> (http://tristanedwards.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/t4t5/colorfulalert/issues"
+    "url": "https://github.com/naru0504/colorfulalert/issues"
   },
   "homepage": "http://tristanedwards.me/colorfulalert",
   "devDependencies": {

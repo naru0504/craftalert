@@ -1,7 +1,7 @@
 /*
  * colorfulalert
  * 2014-2017 – Tristan Edwards
- * https://github.com/t4t5/colorfulalert
+ * https://github.com/naru0504/colorfulalert
  */
 
 import init from './modules/init';
