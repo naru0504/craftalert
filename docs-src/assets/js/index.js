@@ -35,7 +35,7 @@ class MyInput extends Component {
      * This will update the value that the confirm
      * button resolves to:
      */
-    swal.setActionValue(text);
+    cral.setActionValue(text);
   }
 
   render() {
@@ -55,7 +55,7 @@ let el = wrapper.firstChild;
 
 window.reactExample = () => {
 
-  swal({
+  cral({
     text: "Write something here:",
     content: el,
     buttons: {
@@ -65,7 +65,7 @@ window.reactExample = () => {
     },
   })
   .then((value) => {
-    swal(`You typed: ${value}`);
+    cral(`You typed: ${value}`);
   });
 
 };

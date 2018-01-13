@@ -1,4 +1,4 @@
-export interface SwalState {
+export interface cralState {
     isOpen: boolean;
     promise: {
         resolve?(value: string): void;
@@ -18,7 +18,7 @@ export interface ActionOptions {
         closeModal?: boolean;
     };
 }
-declare let state: SwalState;
+declare let state: cralState;
 export declare const resetState: () => void;
 export declare const setActionValue: (opts: string | ActionOptions) => void;
 export declare const setActionOptionsFor: (buttonKey: string, {closeModal}?: {

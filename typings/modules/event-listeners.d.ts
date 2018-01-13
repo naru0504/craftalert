@@ -1,3 +1,3 @@
-import { SwalOptions } from './options';
-declare const addEventListeners: (opts: SwalOptions) => void;
+import { cralOptions } from './options';
+declare const addEventListeners: (opts: cralOptions) => void;
 export default addEventListeners;

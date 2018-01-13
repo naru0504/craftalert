@@ -1,9 +1,9 @@
 :root {
-  --swal-red: #F27474;
+  --cral-red: #F27474;
 }
 
-.swal-icon--error {
-  border-color: var(--swal-red);
+.cral-icon--error {
+  border-color: var(--cral-red);
   animation: animateErrorIcon 0.5s;
 
   &__x-mark {
@@ -16,7 +16,7 @@
     position: absolute;
     height: 5px;
     width: 47px;
-    background-color: var(--swal-red);
+    background-color: var(--cral-red);
     display: block;
     top: 37px;
     border-radius: 2px;

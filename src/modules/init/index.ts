@@ -1,5 +1,5 @@
 import { getNode } from '../utils';
-import { SwalOptions } from '../options';
+import { cralOptions } from '../options';
 
 import CLASS_NAMES from '../class-list';
 const { MODAL } = CLASS_NAMES;
@@ -16,7 +16,7 @@ import { throwErr } from '../utils';
  * Inject modal and overlay into the DOM
  * Then format the modal according to the given opts
  */
-export const init = (opts: SwalOptions): void => {
+export const init = (opts: cralOptions): void => {
   const modal: Element = getNode(MODAL);
 
   if (!modal) {

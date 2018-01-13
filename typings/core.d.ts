@@ -1,13 +1,13 @@
-import { ActionOptions, SwalState } from './modules/state';
-import { SwalOptions } from './modules/options';
-export declare type SwalParams = (string | Partial<SwalOptions>)[];
+import { ActionOptions, cralState } from './modules/state';
+import { cralOptions } from './modules/options';
+export declare type cralParams = (string | Partial<cralOptions>)[];
 export interface SweetAlert {
-    (...params: SwalParams): Promise<any>;
+    (...params: cralParams): Promise<any>;
     close?(namespace: string): void;
-    getState?(): SwalState;
+    getState?(): cralState;
     setActionValue?(opts: string | ActionOptions): void;
     stopLoading?(): void;
     setDefaults?(opts: object): void;
 }
-declare const swal: SweetAlert;
-export default swal;
+declare const cral: SweetAlert;
+export default cral;

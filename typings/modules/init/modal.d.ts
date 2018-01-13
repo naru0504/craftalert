@@ -1,5 +1,5 @@
-import { SwalOptions } from '../options';
+import { cralOptions } from '../options';
 export declare const injectElIntoModal: (markup: string) => HTMLElement;
-export declare const initModalContent: (opts: SwalOptions) => void;
+export declare const initModalContent: (opts: cralOptions) => void;
 declare const initModalOnce: () => void;
 export default initModalOnce;

@@ -1,9 +1,9 @@
 :root {
-  --swal-blue: #C9DAE1;
+  --cral-blue: #C9DAE1;
 }
 
-.swal-icon--info {
-  border-color: var(--swal-blue);
+.cral-icon--info {
+  border-color: var(--cral-blue);
 
   /* "i"-letter body */
   &::before {
@@ -15,7 +15,7 @@
     bottom: 17px;
     border-radius: 2px;
     margin-left: -2px;
-    background-color: var(--swal-blue);
+    background-color: var(--cral-blue);
   }
   /* "i"-letter dot */
   &::after {
@@ -26,7 +26,7 @@
     border-radius: 50%;
     margin-left: -3px;
     top: 19px;
-    background-color: var(--swal-blue);
+    background-color: var(--cral-blue);
     left: 50%;
   }
 }

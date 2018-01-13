@@ -33,7 +33,7 @@ module.exports = (_env, args) => {
     output: {
       path: path.resolve(__dirname, BUILD_PATH),
       filename: JS_FILE_NAME,
-      library: 'swal',
+      library: 'cral',
       libraryTarget: 'umd',
     },
 
@@ -47,14 +47,14 @@ module.exports = (_env, args) => {
     module: {
       rules: [
         {
-          // Expose global swal() function
+          // Expose global cral() function
           test: require.resolve("./src/sweetalert"),
           use: [{
             loader: 'expose-loader',
             options: 'sweetAlert'
           }, {
             loader: 'expose-loader',
-            options: 'swal'
+            options: 'cral'
           }],
         },
         {

@@ -44,7 +44,7 @@ var updateModal = function updateModal(useCase, nextUseCase, isInitial) {
     contentOverlayEl.classList.add('show');
   }
 
-  var modalEl = document.querySelector('.swal-modal-example');
+  var modalEl = document.querySelector('.cral-modal-example');
 
   modalEl.dataset.type = className;
 

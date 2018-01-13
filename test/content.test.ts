@@ -1,6 +1,6 @@
 import {
-  swal,
-  removeSwal,
+  cral,
+  removecral,
   $,
   $$,
   CLASS_NAMES,
@@ -11,18 +11,18 @@ const {
   MODAL_TEXT
 } = CLASS_NAMES;
 
-afterEach(() => removeSwal());
+afterEach(() => removecral());
 
 describe("show content", () => {
 
   test("shows no content by default", () => {
-    swal("Hello");
+    cral("Hello");
 
     expect($$(CONTENT).length).toBe(0);
   });
 
   test("shows input when using content: 'input'", () => {
-    swal({
+    cral({
       content: "input",
     });
 
@@ -34,7 +34,7 @@ describe("show content", () => {
   });
 
   test("can customize input with more advanced content options", () => {
-    swal({
+    cral({
       content: {
         element: "input",
         attributes: {
@@ -56,7 +56,7 @@ describe("show content", () => {
     let btn = document.createElement('button');
     btn.classList.add('custom-element');
 
-    swal({
+    cral({
       content: btn,
     });
 
@@ -68,14 +68,14 @@ describe("show content", () => {
 
 describe("show modal text", () => {
   test("transforms newline to break", () => {
-    swal('Hello\nWorld\n');
+    cral('Hello\nWorld\n');
 
     expect($(`.${MODAL_TEXT} br`).length).toBe(2);
   });
 
   test("escapes HTML elements", () => {
     const text = '<script>bad stuff</script>';
-    swal(text);
+    cral(text);
 
     expect($(`.${MODAL_TEXT} script`).length).toBe(0);
     expect($$(MODAL_TEXT).text()).toEqual(expect.stringMatching(text));

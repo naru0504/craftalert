@@ -1,4 +1,4 @@
-import { SwalParams } from '../../core';
+import { cralParams } from '../../core';
 
 import {
   throwErr,
@@ -26,7 +26,7 @@ import {
 /*
  * The final object that we transform the given params into
  */
-export interface SwalOptions {
+export interface cralOptions {
   title: string,
   text: string,
   icon: string,
@@ -39,7 +39,7 @@ export interface SwalOptions {
   timer: number,
 };
 
-const defaultOpts: SwalOptions = {
+const defaultOpts: cralOptions = {
   title: null,
   text: null,
   icon: null,
@@ -55,7 +55,7 @@ const defaultOpts: SwalOptions = {
 /*
  * Default options customizeable through "setDefaults":
  */
-let userDefaults: SwalOptions = Object.assign({}, defaultOpts);
+let userDefaults: cralOptions = Object.assign({}, defaultOpts);
 
 export const setDefaults = (opts: object): void => {
   userDefaults = Object.assign({}, defaultOpts, opts);
@@ -90,7 +90,7 @@ const invalidParam = (param: any, index: number): void => {
   throwErr(`${indexToOrdinal(index)} argument ('${param}') is invalid`);
 };
 
-const expectOptionsOrNothingAfter = (index: number, allParams: SwalParams): void => {
+const expectOptionsOrNothingAfter = (index: number, allParams: cralParams): void => {
   let nextIndex = (index + 1);
   let nextParam = allParams[nextIndex];
 
@@ -99,7 +99,7 @@ const expectOptionsOrNothingAfter = (index: number, allParams: SwalParams): void
   }
 };
 
-const expectNothingAfter = (index: number, allParams: SwalParams): void => {
+const expectNothingAfter = (index: number, allParams: cralParams): void => {
   let nextIndex = (index + 1);
   let nextParam = allParams[nextIndex];
 
@@ -110,9 +110,9 @@ const expectNothingAfter = (index: number, allParams: SwalParams): void => {
 
 /*
  * Based on the number of arguments, their position and their type,
- * we return an object that's merged into the final SwalOptions
+ * we return an object that's merged into the final cralOptions
  */
-const paramToOption = (opts: any, param: any, index: number, allParams: SwalParams): object => {
+const paramToOption = (opts: any, param: any, index: number, allParams: cralParams): object => {
 
   const paramType = (typeof param);
   const isString = (paramType === "string");
@@ -120,14 +120,14 @@ const paramToOption = (opts: any, param: any, index: number, allParams: SwalPara
 
   if (isString) {
     if (index === 0) {
-      // Example: swal("Hi there!");
+      // Example: cral("Hi there!");
       return {
         text: param,
       };
     }
 
     else if (index === 1) {
-      // Example: swal("Wait!", "Are you sure you want to do this?");
+      // Example: cral("Wait!", "Are you sure you want to do this?");
       // (The text is now the second argument)
       return {
         text: param,
@@ -136,7 +136,7 @@ const paramToOption = (opts: any, param: any, index: number, allParams: SwalPara
     }
 
     else if (index === 2) {
-      // Example: swal("Wait!", "Are you sure?", "warning");
+      // Example: cral("Wait!", "Are you sure?", "warning");
       expectOptionsOrNothingAfter(index, allParams);
 
       return {
@@ -150,7 +150,7 @@ const paramToOption = (opts: any, param: any, index: number, allParams: SwalPara
   }
 
   else if (isDOMNode && index === 0) {
-    // Example: swal(<DOMNode />);
+    // Example: cral(<DOMNode />);
     expectOptionsOrNothingAfter(index, allParams);
 
     return {
@@ -171,12 +171,12 @@ const paramToOption = (opts: any, param: any, index: number, allParams: SwalPara
 };
 
 /*
- * No matter if the user calls swal with
- * - swal("Oops!", "An error occured!", "error") or
- * - swal({ title: "Oops!", text: "An error occured!", icon: "error" })
+ * No matter if the user calls cral with
+ * - cral("Oops!", "An error occured!", "error") or
+ * - cral({ title: "Oops!", text: "An error occured!", icon: "error" })
  * ... we always want to transform the params into the second version
  */
-export const getOpts = (...params: SwalParams): SwalOptions => {
+export const getOpts = (...params: cralParams): cralOptions => {
   let opts = <any>{};
 
   params.forEach((param, index) => {
@@ -192,7 +192,7 @@ export const getOpts = (...params: SwalParams): SwalOptions => {
 
   opts.content = getContentOpts(opts.content);
 
-  const finalOptions: SwalOptions = Object.assign({}, defaultOpts, userDefaults, opts);
+  const finalOptions: cralOptions = Object.assign({}, defaultOpts, userDefaults, opts);
 
   // Check if the users uses any deprecated options:
   Object.keys(finalOptions).forEach(optionName => {

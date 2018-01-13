@@ -1,12 +1,12 @@
-.swal-button--loading {
+.cral-button--loading {
   color: transparent;
 
-  & ~ .swal-button__loader {
+  & ~ .cral-button__loader {
     opacity: 1;
   }
 }
 
-.swal-button__loader {
+.cral-button__loader {
   position: absolute;
   height: auto;
   width: 43px;
@@ -31,7 +31,7 @@
     border-radius: 7px;
     background-color: rgba(255, 255, 255, 0.9);
     transition: background 0.2s;
-    animation: swal-loading-anim 1s infinite;
+    animation: cral-loading-anim 1s infinite;
 
     &:nth-child(3n+2) {
       animation-delay: 0.15s;
@@ -43,7 +43,7 @@
   }
 }
 
-@keyframes swal-loading-anim {
+@keyframes cral-loading-anim {
   0%   { opacity: 0.4; }
   20%  { opacity: 0.4; }
   50% { opacity: 1.0; }

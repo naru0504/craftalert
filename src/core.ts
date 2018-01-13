@@ -16,32 +16,32 @@ import {
 import state, {
   setActionValue,
   ActionOptions,
-  SwalState,
+  cralState,
 } from './modules/state';
 
 import {
-  SwalOptions,
+  cralOptions,
   getOpts,
   setDefaults,
 } from './modules/options';
 
-export type SwalParams = (string|Partial<SwalOptions>)[];
+export type cralParams = (string|Partial<cralOptions>)[];
 
 export interface SweetAlert {
-  (...params: SwalParams): Promise<any>,
+  (...params: cralParams): Promise<any>,
   close? (namespace: string): void,
-  getState? (): SwalState,
+  getState? (): cralState,
   setActionValue? (opts: string|ActionOptions): void,
   stopLoading? (): void,
   setDefaults? (opts: object): void,
 };
 
-const swal:SweetAlert = (...args) => {
+const cral:SweetAlert = (...args) => {
 
   // Prevent library to be run in Node env:
   if (typeof window === 'undefined') return;
 
-  const opts: SwalOptions = getOpts(...args);
+  const opts: cralOptions = getOpts(...args);
 
   return new Promise<any>((resolve, reject) => {
     state.promise = { resolve, reject };
@@ -56,11 +56,11 @@ const swal:SweetAlert = (...args) => {
   });
 };
 
-swal.close = onAction;
-swal.getState = getState;
-swal.setActionValue = setActionValue;
-swal.stopLoading = stopLoading;
-swal.setDefaults = setDefaults;
+cral.close = onAction;
+cral.getState = getState;
+cral.setActionValue = setActionValue;
+cral.stopLoading = stopLoading;
+cral.setDefaults = setDefaults;
 
-export default swal;
+export default cral;
 

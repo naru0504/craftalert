@@ -10,7 +10,7 @@ const {
   BUTTON_LOADING,
 } = CLASS_NAMES;
 
-import state, { SwalState } from './state';
+import state, { cralState } from './state';
 
 export const openModal = (): void => {
   let overlay = getNode(OVERLAY);
@@ -48,7 +48,7 @@ export const onAction = (namespace: string = CANCEL_KEY): void => {
  * Filter the state object. Remove the stuff
  * that's only for internal use
  */
-export const getState = (): SwalState => {
+export const getState = (): cralState => {
   const publicState = Object.assign({}, state);
   delete publicState.promise;
   delete publicState.timer;

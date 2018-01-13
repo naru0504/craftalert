@@ -5,10 +5,10 @@
 @import './css/button-loader';
 
 :root {
-  --swal-modal-width: 478px;
+  --cral-modal-width: 478px;
 }
 
-.swal-overlay {
+.cral-overlay {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -34,7 +34,7 @@
     opacity: 1;
     pointer-events: auto;
 
-    & .swal-modal {
+    & .cral-modal {
       opacity: 1;
       pointer-events: auto;
       box-sizing: border-box;
@@ -44,8 +44,8 @@
   }
 }
 
-.swal-modal {
-  width: var(--swal-modal-width);
+.cral-modal {
+  width: var(--cral-modal-width);
   opacity: 0;
   pointer-events: none;
   background-color: white;

@@ -1,20 +1,20 @@
 :root {
-  --swal-btn-confirm: #7cd1f9;
-  --swal-btn-confirm-hover: color(var(--swal-btn-confirm) shade(3%));
-  --swal-btn-confirm-active: color(var(--swal-btn-confirm) shade(10%));
+  --cral-btn-confirm: #7cd1f9;
+  --cral-btn-confirm-hover: color(var(--cral-btn-confirm) shade(3%));
+  --cral-btn-confirm-active: color(var(--cral-btn-confirm) shade(10%));
 
-  --swal-btn-cancel: #EFEFEF;
-  --swal-btn-cancel-hover: color(var(--swal-btn-cancel) shade(3%));
-  --swal-btn-cancel-active: color(var(--swal-btn-cancel) shade(10%));
+  --cral-btn-cancel: #EFEFEF;
+  --cral-btn-cancel-hover: color(var(--cral-btn-cancel) shade(3%));
+  --cral-btn-cancel-active: color(var(--cral-btn-cancel) shade(10%));
 
-  --swal-btn-danger: #e64942;
-  --swal-btn-danger-hover: color(var(--swal-btn-danger) shade(3%));
-  --swal-btn-danger-active: color(var(--swal-btn-danger) shade(10%));
+  --cral-btn-danger: #e64942;
+  --cral-btn-danger-hover: color(var(--cral-btn-danger) shade(3%));
+  --cral-btn-danger-active: color(var(--cral-btn-danger) shade(10%));
 
-  --swal-focus-color: rgba(43, 114, 165, 0.3);
+  --cral-focus-color: rgba(43, 114, 165, 0.3);
 }
 
-.swal-footer {
+.cral-footer {
   text-align: right;
   padding-top: 13px;
   margin-top: 13px;
@@ -24,14 +24,14 @@
   border-top-right-radius: 0;
 }
 
-.swal-button-container {
+.cral-button-container {
   margin: 5px;
   display: inline-block;
   position: relative;
 }
 
-.swal-button {
-  background-color: var(--swal-btn-confirm);
+.cral-button {
+  background-color: var(--cral-btn-confirm);
   color: white;
   border: none;
   box-shadow: none;
@@ -42,10 +42,10 @@
   margin: 0;
   cursor: pointer;
   &[not:disabled]:hover {
-    background-color: var(--swal-btn-confirm-hover);
+    background-color: var(--cral-btn-confirm-hover);
   }
   &:active {
-    background-color: var(--swal-btn-confirm-active);
+    background-color: var(--cral-btn-confirm-active);
   }
   &:focus {
     outline: none;
@@ -64,12 +64,12 @@
 
   &--cancel {
     color: #555555;
-    background-color: var(--swal-btn-cancel);
+    background-color: var(--cral-btn-cancel);
     &[not:disabled]:hover {
-      background-color: var(--swal-btn-cancel-hover);
+      background-color: var(--cral-btn-cancel-hover);
     }
     &:active {
-      background-color: var(--swal-btn-cancel-active);
+      background-color: var(--cral-btn-cancel-active);
     }
     &:focus {
       box-shadow: 
@@ -79,12 +79,12 @@
   }
 
   &--danger {
-    background-color: var(--swal-btn-danger);
+    background-color: var(--cral-btn-danger);
     &[not:disabled]:hover {
-      background-color: var(--swal-btn-danger-hover);
+      background-color: var(--cral-btn-danger-hover);
     }
     &:active {
-      background-color: var(--swal-btn-danger-active);
+      background-color: var(--cral-btn-danger-active);
     }
     &:focus {
       box-shadow: 

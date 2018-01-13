@@ -1,10 +1,10 @@
 :root {
-  --swal-green: #A5DC86;
-  --swal-green-light: rgba(165, 220, 134, 0.2);
+  --cral-green: #A5DC86;
+  --cral-green-light: rgba(165, 220, 134, 0.2);
 }
 
-.swal-icon--success {
-  border-color: var(--swal-green);
+.cral-icon--success {
+  border-color: var(--cral-green);
 
   /* Moving circular line */
   &::before,
@@ -39,7 +39,7 @@
   &__ring {
     width: 80px;
     height: 80px;
-    border: 4px solid var(--swal-green-light);
+    border: 4px solid var(--cral-green-light);
     border-radius: 50%;
     box-sizing: content-box;
     position: absolute;
@@ -63,7 +63,7 @@
 
   &__line {
     height: 5px;
-    background-color: var(--swal-green);
+    background-color: var(--cral-green);
     display: block;
     border-radius: 2px;
     position: absolute;

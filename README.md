@@ -20,7 +20,7 @@
 </p>
 
 <p align="center">
-  <img alt="A success modal" src="https://github.com/t4t5/sweetalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/swal.gif">
+  <img alt="A success modal" src="https://github.com/t4t5/sweetalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/cral.gif">
 </p>
 
 
@@ -33,9 +33,9 @@ $ npm install --save sweetalert
 ## Usage
 
 ```javascript
-import swal from 'sweetalert'
+import cral from 'sweetalert'
 
-swal("Hello world!")
+cral("Hello world!")
 ```
 
 ## Upgrading from 1.X
@@ -59,13 +59,13 @@ Many improvements and breaking changes have been introduced in the 2.0 release. 
 
 ### An error message:
 ```javascript
-swal("Oops!", "Something went wrong!", "error")
+cral("Oops!", "Something went wrong!", "error")
 ```
 
 ### A warning message, with a function attached to the confirm message:
   - Using promises:
   ```javascript
-  swal({
+  cral({
     title: "Are you sure?",
     text: "Are you sure that you want to leave this page?",
     icon: "warning",
@@ -73,13 +73,13 @@ swal("Oops!", "Something went wrong!", "error")
   })
   .then(willDelete => {
     if (willDelete) {
-      swal("Deleted!", "Your imaginary file has been deleted!", "success");
+      cral("Deleted!", "Your imaginary file has been deleted!", "success");
     }
   });
   ```
   - Using async/await:
   ```javascript
-  const willDelete = await swal({
+  const willDelete = await cral({
     title: "Are you sure?",
     text: "Are you sure that you want to delete this file?",
     icon: "warning",
@@ -87,33 +87,33 @@ swal("Oops!", "Something went wrong!", "error")
   })
 
   if (willDelete) {
-    swal("Deleted!", "Your imaginary file has been deleted!", "success");
+    cral("Deleted!", "Your imaginary file has been deleted!", "success");
   }
   ```
   
 ### A prompt modal, where the user's input is logged:
   - Using promises:
   ```javascript
-  swal("Type something:", {
+  cral("Type something:", {
     content: "input",
   })
   .then((value) => {
-    swal(`You typed: ${value}`);
+    cral(`You typed: ${value}`);
   })
   ```
   - Using async/await:
   ```javascript
-  const value = await swal("Type something:", {
+  const value = await cral("Type something:", {
     content: "input",
   })
 
-  swal(`You typed: ${value}`);
+  cral(`You typed: ${value}`);
   ```
 
 ### In combination with Fetch:
   - Using promises:
   ```javascript
-  swal({
+  cral({
     text: 'Wanna log some information about Bulbasaur?',
     button: {
       text: "Search!",
@@ -128,12 +128,12 @@ swal("Oops!", "Something went wrong!", "error")
   .then(result => result.json())
   .then(json => console.log(json))
   .catch(err => {
-    swal("Oops!", "Seems like we couldn't fetch the info", "error")
+    cral("Oops!", "Seems like we couldn't fetch the info", "error")
   })
   ```
   - Using async/await:
   ```javascript
-  const willSearch = await swal({
+  const willSearch = await cral({
     text: 'Wanna log some information about Bulbasaur?',
     button: {
       text: "Search!",
@@ -147,7 +147,7 @@ swal("Oops!", "Something went wrong!", "error")
       const json = await result.json()
       console.log(json)
     } catch (err) {
-      swal("Oops!", "Seems like we couldn't fetch the info", "error")
+      cral("Oops!", "Seems like we couldn't fetch the info", "error")
     }
   }
   ```

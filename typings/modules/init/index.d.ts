@@ -1,3 +1,3 @@
-import { SwalOptions } from '../options';
-export declare const init: (opts: SwalOptions) => void;
+import { cralOptions } from '../options';
+export declare const init: (opts: cralOptions) => void;
 export default init;

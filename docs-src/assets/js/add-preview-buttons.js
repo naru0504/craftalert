@@ -26,12 +26,12 @@ const getCodeEl = placeholder => {
 const getCode = highlightEl => highlightEl.innerText.trim();
 
 const resetStyles = () => {
-  const swalOverlay = document.querySelector('.swal-overlay');
-  const allSwalEls = swalOverlay.querySelectorAll('*');
+  const cralOverlay = document.querySelector('.cral-overlay');
+  const allcralEls = cralOverlay.querySelectorAll('*');
 
-  swalOverlay.removeAttribute('style');
+  cralOverlay.removeAttribute('style');
 
-  allSwalEls.forEach((el) => {
+  allcralEls.forEach((el) => {
     el.removeAttribute('style');
   });
 };
@@ -67,7 +67,7 @@ previewPlaceholders.forEach((placeholder) => {
     if (givenFunction) {
       window[givenFunction]();
     } else if (lang === "css") {
-      swal("Sweet!", "I like customizing!");
+      cral("Sweet!", "I like customizing!");
       resetStyles();
       setStyles(code);
     } else {

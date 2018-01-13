@@ -15,12 +15,12 @@ npm install sweetalert --save
 Then, simply import it into your application:
 
 ```javascript
-import swal from 'sweetalert';
+import cral from 'sweetalert';
 ```
 
 ## CDN
 
-You can also find SweetAlert on [unpkg](https://unpkg.com/sweetalert) and [jsDelivr](https://cdn.jsdelivr.net/npm/sweetalert) and use the global `swal` variable.
+You can also find SweetAlert on [unpkg](https://unpkg.com/sweetalert) and [jsDelivr](https://cdn.jsdelivr.net/npm/sweetalert) and use the global `cral` variable.
 
 ```html
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -30,24 +30,24 @@ You can also find SweetAlert on [unpkg](https://unpkg.com/sweetalert) and [jsDel
 
 ## Showing an alert
 
-After importing the files into your application, you can call the `swal` function (make sure it's called *after* the DOM has loaded!)
+After importing the files into your application, you can call the `cral` function (make sure it's called *after* the DOM has loaded!)
 
 ```js
-swal("Hello world!");
+cral("Hello world!");
 ```
 <preview-button></preview-button>
 
 If you pass two arguments, the first one will be the modal's title, and the second one its text.
 
 ```js
-swal("Here's the title!", "...and here's the text!");
+cral("Here's the title!", "...and here's the text!");
 ```
 <preview-button></preview-button>
 
 And with a third argument, you can add an icon to your alert! There are 4 predefined ones: `"warning"`, `"error"`, `"success"` and `"info"`.
 
 ```js
-swal("Good job!", "You clicked the button!", "success");
+cral("Good job!", "You clicked the button!", "success");
 ```
 <preview-button></preview-button>
 
@@ -56,7 +56,7 @@ swal("Good job!", "You clicked the button!", "success");
 The last example can also be rewritten using an object as the only parameter:
 
 ```js
-swal({
+cral({
   title: "Good job!",
   text: "You clicked the button!",
   icon: "success",
@@ -66,7 +66,7 @@ swal({
 With this format, we can specify many more options to customize our alert. For example we can change the text on the confirm button to `"Aww yiss!"`:
 
 ```js
-swal({
+cral({
   title: "Good job!",
   text: "You clicked the button!",
   icon: "success",
@@ -78,7 +78,7 @@ swal({
 You can even combine the first syntax with the second one, which might save you some typing:
 
 ```js
-swal("Good job!", "You clicked the button!", "success", {
+cral("Good job!", "You clicked the button!", "success", {
   button: "Aww yiss!",
 });
 ```
@@ -92,9 +92,9 @@ SweetAlert uses [promises](https://developer.mozilla.org/en/docs/Web/JavaScript/
 If the user clicks the confirm button, the promise resolves to `true`. If the alert is dismissed (by clicking outside of it), the promise resolves to `null`.
 
 ```js
-swal("Click on either the button or outside the modal.")
+cral("Click on either the button or outside the modal.")
 .then((value) => {
-  swal(`The returned value is: ${value}`);
+  cral(`The returned value is: ${value}`);
 });
 ```
 <preview-button></preview-button>
@@ -105,7 +105,7 @@ This comes in handy if you want to warn the user before they perform a dangerous
 - By setting `dangerMode` to `true`, the focus will automatically be set on the cancel button instead of the confirm button, and the confirm button will be red instead of blue to emphasize the dangerous action.
 
 ```js
-swal({
+cral({
   title: "Are you sure?",
   text: "Once deleted, you will not be able to recover this imaginary file!",
   icon: "warning",
@@ -114,11 +114,11 @@ swal({
 })
 .then((willDelete) => {
   if (willDelete) {
-    swal("Poof! Your imaginary file has been deleted!", {
+    cral("Poof! Your imaginary file has been deleted!", {
       icon: "success",
     });
   } else {
-    swal("Your imaginary file is safe!");
+    cral("Your imaginary file is safe!");
   }
 });
 ```
@@ -134,7 +134,7 @@ We've already seen how we can set the text on the confirm button using `button: 
 If we also want to show and customize the *cancel button*, we can instead set `buttons` to an *array of strings*, where the first value is the cancel button's text and the second one is the confirm button's text:
 
 ```js
-swal("Are you sure you want to do this?", {
+cral("Are you sure you want to do this?", {
   buttons: ["Oh noez!", "Aww yiss!"],
 });
 ```
@@ -143,7 +143,7 @@ swal("Are you sure you want to do this?", {
 If you want one of the buttons to just have their default text, you can set the value to `true` instead of a string:
 
 ```js
-swal("Are you sure you want to do this?", {
+cral("Are you sure you want to do this?", {
   buttons: ["Oh noez!", true],
 });
 ```
@@ -159,7 +159,7 @@ In the example below, we set 3 buttons:
 - `defeat`. Here, we specify `true` to let SweetAlert set some default configurations for the button. In this case, it will set the `text` to `"Defeat"` (capitalized) and the resolved value to `defeat`. Had we set the `cancel` button to `true`, it would still resolve to `null` as expected.
 
 ```js
-swal("A wild Pikachu appeared! What do you want to do?", {
+cral("A wild Pikachu appeared! What do you want to do?", {
   buttons: {
     cancel: "Run away!",
     catch: {
@@ -173,15 +173,15 @@ swal("A wild Pikachu appeared! What do you want to do?", {
   switch (value) {
 
     case "defeat":
-      swal("Pikachu fainted! You gained 500 XP!");
+      cral("Pikachu fainted! You gained 500 XP!");
       break;
 
     case "catch":
-      swal("Gotcha!", "Pikachu was caught!", "success");
+      cral("Gotcha!", "Pikachu was caught!", "success");
       break;
 
     default:
-      swal("Got away safely!");
+      cral("Got away safely!");
   }
 });
 ```
@@ -194,7 +194,7 @@ You can check out all the available button options in the [docs](/docs#buttons).
 Since SweetAlert is promise-based, it makes sense to pair it with AJAX functions that are also promise-based. Below is an example of using `fetch` to search for artists on the iTunes API. Note that we're using `content: "input"` in order to both show an input-field *and* retrieve its value when the user clicks the confirm button:
 
 ```js
-swal({
+cral({
   text: 'Search for a movie. e.g. "La La Land".',
   content: "input",
   button: {
@@ -214,13 +214,13 @@ swal({
   const movie = json.results[0];
 
   if (!movie) {
-    return swal("No movie was found!");
+    return cral("No movie was found!");
   }
 
   const name = movie.trackName;
   const imageURL = movie.artworkUrl100;
 
-  swal({
+  cral({
     title: "Top result:",
     text: name,
     icon: imageURL,
@@ -228,10 +228,10 @@ swal({
 })
 .catch(err => {
   if (err) {
-    swal("Oh noes!", "The AJAX request failed!", "error");
+    cral("Oh noes!", "The AJAX request failed!", "error");
   } else {
-    swal.stopLoading();
-    swal.close();
+    cral.stopLoading();
+    cral.close();
   }
 });
 ```
@@ -247,11 +247,11 @@ In the previous example, we saw how we could set `content` to `"input"` to get a
 Let's see how we can recreate the functionality of the following modal...
 
 ```js
-swal("Write something here:", {
+cral("Write something here:", {
   content: "input",
 })
 .then((value) => {
-  swal(`You typed: ${value}`);
+  cral(`You typed: ${value}`);
 });
 ```
 <preview-button></preview-button>
@@ -286,7 +286,7 @@ class MyInput extends Component {
      * This will update the value that the confirm
      * button resolves to:
      */
-    swal.setActionValue(text);
+    cral.setActionValue(text);
   }
 
   render() {
@@ -304,7 +304,7 @@ let wrapper = document.createElement('div');
 ReactDOM.render(<MyInput />, wrapper);
 let el = wrapper.firstChild;
 
-swal({
+cral({
   text: "Write something here:",
   content: el,
   buttons: {
@@ -318,14 +318,14 @@ swal({
   },
 })
 .then((value) => {
-  swal(`You typed: ${value}`);
+  cral(`You typed: ${value}`);
 });
 ```
 <preview-button data-function="reactExample"></preview-button>
 
-This might look very complex at first, but it's actually pretty simple. All we're doing is creating an input tag as a React component. We then extract its DOM node and pass it into under the `swal` function's `content` option to render it as an unstyled element.
+This might look very complex at first, but it's actually pretty simple. All we're doing is creating an input tag as a React component. We then extract its DOM node and pass it into under the `cral` function's `content` option to render it as an unstyled element.
 
-The only code that's specific to SweetAlert is the `swal.setActionValue()` and the `swal()` call at the end. The rest is just basic React and JavaScript.
+The only code that's specific to SweetAlert is the `cral.setActionValue()` and the `cral()` call at the end. The rest is just basic React and JavaScript.
 
 <figure align="center">
   <img src="/assets/images/modal-fb-example@2x.png" alt="Facebook modal" width="400" />
@@ -343,8 +343,8 @@ The most important change is that callback functions have been deprecated in fav
 
 Below are some additional deprecated options along with their replacements:
 
-- When using a single string parameter (e.g. `swal("Hello world!")`), that parameter will be the modal's `text` instead of its `title`.
-- `type` and `imageUrl` have been replaced with a single `icon` option. If you're using the shorthand version (`swal("Hi", "Hello world", "warning")`) you don't have to change anything.
+- When using a single string parameter (e.g. `cral("Hello world!")`), that parameter will be the modal's `text` instead of its `title`.
+- `type` and `imageUrl` have been replaced with a single `icon` option. If you're using the shorthand version (`cral("Hi", "Hello world", "warning")`) you don't have to change anything.
 - `customClass` is now `className`.
 - `imageSize` is no longer used. Instead, you should specify dimension restrictions in CSS if necessary. If you have a special use case, you can give your modal a custom class.
 - `showCancelButton` and `showConfirmButton` are no longer needed. Instead, you can set `buttons: true` to show both buttons, or `buttons: false` to hide all buttons. By default, only the confirm button is shown.

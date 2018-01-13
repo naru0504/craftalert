@@ -1,6 +1,6 @@
 import { ButtonList } from './buttons';
 import { ContentOptions } from './content';
-export interface SwalOptions {
+export interface cralOptions {
     title: string;
     text: string;
     icon: string;
@@ -13,4 +13,4 @@ export interface SwalOptions {
     timer: number;
 }
 export declare const setDefaults: (opts: object) => void;
-export declare const getOpts: (...params: (string | Partial<SwalOptions>)[]) => SwalOptions;
+export declare const getOpts: (...params: (string | Partial<cralOptions>)[]) => cralOptions;

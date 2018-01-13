@@ -1,7 +1,7 @@
 import { ButtonList } from './../options/buttons';
 import { stringToNode, getNode } from '../utils';
 import { modalMarkup } from '../markup';
-import { SwalOptions } from '../options';
+import { cralOptions } from '../options';
 
 import CLASS_NAMES from '../class-list';
 const { MODAL, OVERLAY } = CLASS_NAMES;
@@ -32,7 +32,7 @@ const resetModalElement = (modal: Element): void => {
 /*
  * Add custom class to modal element
  */
-const customizeModalElement = (modal: Element, opts: SwalOptions): void => {
+const customizeModalElement = (modal: Element, opts: cralOptions): void => {
   resetModalElement(modal);
 
   const { className } = opts;
@@ -46,7 +46,7 @@ const customizeModalElement = (modal: Element, opts: SwalOptions): void => {
  * It's important to run the following functions in this particular order,
  * so that the elements get appended one after the other.
  */
-export const initModalContent = (opts: SwalOptions): void => {
+export const initModalContent = (opts: cralOptions): void => {
   // Start from scratch:
   const modal: Element = getNode(MODAL);
   customizeModalElement(modal, opts);

@@ -1,7 +1,7 @@
 import state from './state';
 import { onAction } from './actions';
 import { getNode } from './utils';
-import { SwalOptions } from './options';
+import { cralOptions } from './options';
 import { CANCEL_KEY } from './options/buttons';
 
 import CLASS_NAMES from './class-list';
@@ -122,7 +122,7 @@ const setTimer = (ms: number): void => {
   }
 };
 
-const addEventListeners = (opts: SwalOptions):void => {
+const addEventListeners = (opts: cralOptions):void => {
   if (opts.closeOnEsc) {
     document.addEventListener('keyup', onKeyUp);
   } else {

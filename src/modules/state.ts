@@ -1,6 +1,6 @@
 import { CONFIRM_KEY } from './options/buttons';
 
-export interface SwalState {
+export interface cralState {
   isOpen: boolean,
   promise: {
     resolve?(value: string): void,
@@ -22,14 +22,14 @@ export interface ActionOptions {
   },
 };
 
-const defaultState: SwalState = {
+const defaultState: cralState = {
   isOpen: false,
   promise: null,
   actions: {},
   timer: null,
 };
 
-let state: SwalState = Object.assign({}, defaultState);
+let state: cralState = Object.assign({}, defaultState);
 
 export const resetState = (): void => {
   state = Object.assign({}, defaultState);

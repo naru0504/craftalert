@@ -1,27 +1,27 @@
 import {
-  swal,
+  cral,
   $$,
   CLASS_NAMES,
-  removeSwal,
+  removecral,
 } from './utils';
 
 const { 
   ICON,
 } = CLASS_NAMES;
 
-afterEach(() => removeSwal());
+afterEach(() => removecral());
 
 describe("show icons", () => {
 
   test("shows icon depending on third argument", () => {
-    swal("Error", "An error occured!", "error");
+    cral("Error", "An error occured!", "error");
 
     expect($$(ICON).length).toBe(1);
     expect($$(ICON).hasClass(`${ICON}--error`)).toBeTruthy();
   });
 
   test("shows icon when using 'icon' object key", () => {
-    swal({
+    cral({
       icon: 'warning',
     });
 
@@ -30,7 +30,7 @@ describe("show icons", () => {
   });
 
   test("hides icon when setting 'icon' key to 'false'", () => {
-    swal({
+    cral({
       icon: false,
     });
 

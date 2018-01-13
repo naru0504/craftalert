@@ -30,7 +30,7 @@
     clip-path: none;
   }
 }
-.landing-top .swal-modal-example {
+.landing-top .cral-modal-example {
   transform: none;
   opacity: 1;
   height: 292px;
@@ -51,27 +51,27 @@
   left: 0;
 }
 @media all and (max-width: $tablet-width) {
-  .landing-top .swal-modal-example {
+  .landing-top .cral-modal-example {
     position: relative;
     display: block;
     margin: 20px auto;
   }
 }
 @media all and (max-width: $mobile-width) {
-  .landing-top .swal-modal-example {
+  .landing-top .cral-modal-example {
     width: 100%;
   }
 }
-.landing-top .swal-modal-example[data-type="success"] {
+.landing-top .cral-modal-example[data-type="success"] {
   height: 292px;
 }
-.landing-top .swal-modal-example[data-type="warning"] {
+.landing-top .cral-modal-example[data-type="warning"] {
   height: 325px;
 }
-.landing-top .swal-modal-example .swal-title {
+.landing-top .cral-modal-example .cral-title {
   padding-top: 10px;
 }
-.landing-top .swal-modal-example .swal-text {
+.landing-top .cral-modal-example .cral-text {
   color: rgba(0,0,0,0.48);
   margin-top: 6px;
 }
@@ -216,11 +216,11 @@
   text-align: left;
   margin-bottom: 15px;
 }
-.comparison-container h5.swal-logo {
+.comparison-container h5.cral-logo {
   text-indent: -9999999px;
   margin-top: 2px;
 }
-.comparison-container h5.swal-logo::after {
+.comparison-container h5.cral-logo::after {
   content: "";
   background-image: url("/assets/images/logo-small.svg");
   width: 91px;

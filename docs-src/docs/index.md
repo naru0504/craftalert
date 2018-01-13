@@ -12,11 +12,11 @@ layout: docs
 
   **Description:**
 
-  The modal's text. It can either be added as a configuration under the key `text` (as in the example below), or passed as the first and only parameter (e.g. `swal("Hello world!")`), or the second one if you have multiple string parameters (e.g. `swal("A title", "Hello world!")`).
+  The modal's text. It can either be added as a configuration under the key `text` (as in the example below), or passed as the first and only parameter (e.g. `cral("Hello world!")`), or the second one if you have multiple string parameters (e.g. `cral("A title", "Hello world!")`).
 
   **Example:**
   ```js
-  swal({
+  cral({
     text: "Hello world!",
   });
   ```
@@ -31,11 +31,11 @@ layout: docs
 
   **Description:**
 
-  The title of the modal. It can either be added as a configuration under the key `title` (as in the example below), or passed as the first string parameter – as long as it's not the only one – of the `swal` function (e.g. `swal("Here's a title!", "Here's some text")`).
+  The title of the modal. It can either be added as a configuration under the key `title` (as in the example below), or passed as the first string parameter – as long as it's not the only one – of the `cral` function (e.g. `cral("Here's a title!", "Here's some text")`).
 
   **Example:**
   ```js
-  swal({
+  cral({
     title: "Here's a title!",
   });
   ```
@@ -57,11 +57,11 @@ layout: docs
   - `"success"`
   - `"info"`
 
-  It can either be added as a configuration under the key `icon`, or passed as the third string parameter of the `swal` function (e.g. `swal("Title", "Text", "success")`).
+  It can either be added as a configuration under the key `icon`, or passed as the third string parameter of the `cral` function (e.g. `cral("Title", "Text", "success")`).
 
   **Example:**
   ```js
-  swal({
+  cral({
     icon: "success",
   });
   ```
@@ -89,14 +89,14 @@ layout: docs
 
   **Examples:**
   ```js
-  swal({
+  cral({
     button: "Coolio",
   });
   ```
   <preview-button></preview-button>
 
   ```js
-  swal({
+  cral({
     button: {
       text: "Hey ho!",
     },
@@ -105,7 +105,7 @@ layout: docs
   <preview-button></preview-button>
 
   ```js
-  swal("Hello world!", {
+  cral("Hello world!", {
     button: false,
   });
   ```
@@ -147,28 +147,28 @@ layout: docs
   **Examples:**
 
   ```js
-  swal({
+  cral({
     buttons: ["Stop", "Do it!"],
   });
   ```
   <preview-button></preview-button>
 
   ```js
-  swal({
+  cral({
     buttons: [true, "Do it!"],
   });
   ```
   <preview-button></preview-button>
 
   ```js
-  swal("Hello world!", {
+  cral("Hello world!", {
     buttons: false,
   });
   ```
   <preview-button></preview-button>
 
   ```js
-  swal({
+  cral({
     buttons: {
       cancel: true,
       confirm: true,
@@ -178,7 +178,7 @@ layout: docs
   <preview-button></preview-button>
 
   ```js
-  swal({
+  cral({
     buttons: {
       cancel: true,
       confirm: "Confirm",
@@ -205,14 +205,14 @@ layout: docs
   **Examples:**
 
   ```js
-  swal({
+  cral({
     content: "input",
   });
   ```
   <preview-button></preview-button>
 
   ```js
-  swal({
+  cral({
     content: {
       element: "input",
       attributes: {
@@ -228,7 +228,7 @@ layout: docs
   var slider = document.createElement("input");
   slider.type = "range";
 
-  swal({
+  cral({
     content: slider,
   });
   ```
@@ -248,7 +248,7 @@ layout: docs
   **Example**:
 
   ```js
-    swal("Hello world!", {
+    cral("Hello world!", {
       className: "red-bg",
     });
   ```
@@ -267,7 +267,7 @@ layout: docs
   **Example:**
 
   ```js
-  swal({
+  cral({
     closeOnClickOutside: false,
   });
   ```
@@ -286,7 +286,7 @@ layout: docs
   **Example:**
 
   ```js
-  swal({
+  cral({
     closeOnEsc: false,
   });
   ```
@@ -306,7 +306,7 @@ layout: docs
   **Example:**
 
   ```js
-  swal("Are you sure?", {
+  cral("Are you sure?", {
     dangerMode: true,
     buttons: true,
   });
@@ -327,7 +327,7 @@ layout: docs
   **Example:**
 
   ```js
-  swal("This modal will disappear soon!", {
+  cral("This modal will disappear soon!", {
     buttons: false,
     timer: 3000,
   });
@@ -339,43 +339,43 @@ layout: docs
 
 | Name | Description | Example |
 | ---- | ----------- | ------- |
-| `close` | Closes the currently open SweetAlert, as if you pressed the cancel button. | `swal.close()` |
-| `getState` | Get the state of the current SweetAlert modal. | `swal.getState()` |
-| `setActionValue` | Change the promised value of one of the modal's buttons. You can either pass in just a string (by default it changes the value of the confirm button), or an object. | `swal.setActionValue({ confirm: 'Text from input' })` |
-| `stopLoading` | Removes all loading states on the modal's buttons. Use it in combination with the button option `closeModal: false`. | `swal.stopLoading()`
+| `close` | Closes the currently open SweetAlert, as if you pressed the cancel button. | `cral.close()` |
+| `getState` | Get the state of the current SweetAlert modal. | `cral.getState()` |
+| `setActionValue` | Change the promised value of one of the modal's buttons. You can either pass in just a string (by default it changes the value of the confirm button), or an object. | `cral.setActionValue({ confirm: 'Text from input' })` |
+| `stopLoading` | Removes all loading states on the modal's buttons. Use it in combination with the button option `closeModal: false`. | `cral.stopLoading()`
 
 
 # Theming
 
-- ### `swal-overlay`
+- ### `cral-overlay`
 
   **Example:**
 
   ```css
-  .swal-overlay {
+  .cral-overlay {
     background-color: rgba(43, 165, 137, 0.45);
   }
   ```
   <preview-button></preview-button>
 
-- ### `swal-modal`
+- ### `cral-modal`
 
   **Example:**
 
   ```css
-  .swal-modal {
+  .cral-modal {
     background-color: rgba(63,255,106,0.69);
     border: 3px solid white;
   }
   ```
   <preview-button></preview-button>
 
-- ### `swal-title`
+- ### `cral-title`
 
   **Example:**
 
   ```css
-  .swal-title {
+  .cral-title {
     margin: 0px;
     font-size: 16px;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
@@ -384,12 +384,12 @@ layout: docs
   ```
   <preview-button></preview-button>
 
-- ### `swal-text`
+- ### `cral-text`
 
   **Example:**
 
   ```css
-  .swal-text {
+  .cral-text {
     background-color: #FEFAE3;
     padding: 17px;
     border: 1px solid #F0E1A1;
@@ -401,12 +401,12 @@ layout: docs
   ```
   <preview-button></preview-button>
 
-- ### `swal-footer`
+- ### `cral-footer`
 
   **Example:**
 
   ```css
-  .swal-footer {
+  .cral-footer {
     background-color: rgb(245, 248, 250);
     margin-top: 32px;
     border-top: 1px solid #E9EEF1;
@@ -415,16 +415,16 @@ layout: docs
   ```
   <preview-button></preview-button>
 
-- ### `swal-button`
+- ### `cral-button`
 
   **Description:**
 
-  The modal's button(s). It has an extra class that changes depending on the button's type, in the format `swal-button--{type}`. The extra class for the confirm button for example is `swal-button--confirm`.
+  The modal's button(s). It has an extra class that changes depending on the button's type, in the format `cral-button--{type}`. The extra class for the confirm button for example is `cral-button--confirm`.
 
   **Example:**
 
   ```css
-  .swal-button {
+  .cral-button {
     padding: 7px 19px;
     border-radius: 2px;
     background-color: #4962B3;

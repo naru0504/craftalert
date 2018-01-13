@@ -1,6 +1,6 @@
 import {
-  swal,
-  removeSwal,
+  cral,
+  removecral,
   $$,
   CLASS_NAMES,
 } from './utils';
@@ -11,7 +11,7 @@ const {
   TITLE,
 } = CLASS_NAMES;
 
-afterEach(() => removeSwal());
+afterEach(() => removecral());
 
 describe("promise value", () => {
 
@@ -22,7 +22,7 @@ describe("promise value", () => {
       $$(OVERLAY).click();
     }, 500);
 
-    const value = await swal();
+    const value = await cral();
 
     expect(value).toBeNull();
   });
@@ -30,11 +30,11 @@ describe("promise value", () => {
   test("changes value with setActionValue", async () => {
 
     setTimeout(() => {
-      swal.setActionValue("test");
+      cral.setActionValue("test");
       $$(CONFIRM_BUTTON).click();
     }, 500);
 
-    const value = await swal(); 
+    const value = await cral(); 
 
     expect(value).toEqual("test");
   });
@@ -42,13 +42,13 @@ describe("promise value", () => {
   test("changes cancel value with setActionValue", async () => {
 
     setTimeout(() => {
-      swal.setActionValue({
+      cral.setActionValue({
         cancel: "test",
       });
       $$(OVERLAY).click();
     }, 500);
 
-    const value = await swal();
+    const value = await cral();
 
     expect(value).toEqual("test");
   });

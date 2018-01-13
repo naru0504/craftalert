@@ -1,7 +1,7 @@
 import {
   $,
-  swal,
-  removeSwal,
+  cral,
+  removecral,
   $$,
   CLASS_NAMES,
 } from './utils';
@@ -15,14 +15,14 @@ const {
   FOOTER,
 } = CLASS_NAMES;
 
-afterEach(() => removeSwal());
+afterEach(() => removecral());
 
 describe("init", () => {
 
   test("adds elements on first call", () => {
     expect($$(OVERLAY).length).toEqual(0);
 
-    swal("Hello world!");
+    cral("Hello world!");
 
     expect($$(OVERLAY).length).toBe(1);
     expect($$(MODAL).length).toBe(1);
@@ -33,7 +33,7 @@ describe("init", () => {
 describe("string parameters", () => {
 
   test("shows text when using 1 param", () => {
-    swal("Hello world!");
+    cral("Hello world!");
 
     expect($$(MODAL_TEXT).is(':first-child')).toBeTruthy();
     expect($$(MODAL_TEXT).text()).toBe("Hello world!");
@@ -41,7 +41,7 @@ describe("string parameters", () => {
   });
 
   test("shows title and text when using 2 params", () => {
-    swal("Title", "text");
+    cral("Title", "text");
 
     expect($$(MODAL_TITLE).is(':first-child')).toBeTruthy();
     expect($$(MODAL_TITLE).text()).toBe("Title");
@@ -50,7 +50,7 @@ describe("string parameters", () => {
   });
 
   test("shows icon, title and text when using 3 params", () => {
-    swal("Oops", "text", "error");
+    cral("Oops", "text", "error");
 
     expect($$(ICON).is(':first-child')).toBeTruthy();
     expect($$(ICON).hasClass(`${ICON}--error`)).toBeTruthy();

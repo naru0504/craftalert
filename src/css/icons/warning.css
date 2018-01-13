@@ -1,9 +1,9 @@
 :root {
-  --swal-orange: #F8BB86;
+  --cral-orange: #F8BB86;
 }
 
-.swal-icon--warning {
-  border-color: var(--swal-orange);
+.cral-icon--warning {
+  border-color: var(--cral-orange);
   animation: pulseWarning 0.75s infinite alternate;
 
   /* Exclamation mark */
@@ -15,7 +15,7 @@
     top: 10px;
     border-radius: 2px;
     margin-left: -2px;
-    background-color: var(--swal-orange);
+    background-color: var(--cral-orange);
   }
 
   &__dot {
@@ -26,7 +26,7 @@
     margin-left: -4px;
     left: 50%;
     bottom: -11px;
-    background-color: var(--swal-orange);
+    background-color: var(--cral-orange);
   }
 }
 
@@ -35,7 +35,7 @@
     border-color: #F8D486;
   }
   to {
-    border-color: var(--swal-orange);
+    border-color: var(--cral-orange);
   }
 }
 

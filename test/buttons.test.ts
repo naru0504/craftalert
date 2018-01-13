@@ -1,7 +1,7 @@
 import {
   $,
-  swal,
-  removeSwal,
+  cral,
+  removecral,
   $$,
   onAction,
   CLASS_NAMES,
@@ -15,19 +15,19 @@ const {
   MODAL,
 } = CLASS_NAMES;
 
-afterEach(() => removeSwal());
+afterEach(() => removecral());
 
 describe("show buttons", () => {
 
   test("shows only confirm button by default", () => {
-    swal();
+    cral();
 
     expect($$(BUTTON).length).toBe(1);
     expect($$(BUTTON).hasClass(CONFIRM_BUTTON)).toBeTruthy();
   });
 
   test("hides all buttons", () => {
-    swal({
+    cral({
       buttons: false,
     });
 
@@ -35,7 +35,7 @@ describe("show buttons", () => {
   });
 
   test("shows confirm and cancel buttons", () => {
-    swal({
+    cral({
       buttons: true,
     });
 
@@ -45,7 +45,7 @@ describe("show buttons", () => {
   });
 
   test("sets button text", () => {
-    swal({
+    cral({
       button: "Test",
     });
 
@@ -53,7 +53,7 @@ describe("show buttons", () => {
   });
 
   test("sets button texts with array", () => {
-    swal({
+    cral({
       buttons: ["Stop", "Do it"],
     });
 
@@ -62,7 +62,7 @@ describe("show buttons", () => {
   });
 
   test("sets default button texts with array", () => {
-    swal({
+    cral({
       buttons: [true, true],
     });
 
@@ -71,7 +71,7 @@ describe("show buttons", () => {
   });
 
   test("uses button object", () => {
-    swal({
+    cral({
       buttons: {
         cancel: "Run away!",
         confirm: true,
@@ -83,7 +83,7 @@ describe("show buttons", () => {
   });
 
   test("sets more than 2 buttons", () => {
-    swal({
+    cral({
       buttons: {
         cancel: "Run away!",
         catch: {
@@ -115,7 +115,7 @@ describe("buttons resolve values", () => {
       $$(CONFIRM_BUTTON).click();
     }, 500);
 
-    const value = await swal();
+    const value = await cral();
 
     expect(value).toBeTruthy();
   });
@@ -127,7 +127,7 @@ describe("buttons resolve values", () => {
       $$(CANCEL_BUTTON).click();
     }, 500);
 
-    const value = await swal({
+    const value = await cral({
       buttons: true,
     });
 
@@ -141,7 +141,7 @@ describe("buttons resolve values", () => {
       $$(CONFIRM_BUTTON).click();
     }, 500);
 
-    const value = await swal({
+    const value = await cral({
       button: {
         value: "test",
       },
@@ -157,7 +157,7 @@ describe("buttons resolve values", () => {
       $(`.${BUTTON}--test`).click();
     }, 500);
 
-    const value = await swal({
+    const value = await cral({
       buttons: {
         test: true,
       },
@@ -171,7 +171,7 @@ describe("buttons resolve values", () => {
 describe("loading", () => {
 
   test("shows loading state", async () => {
-    swal({
+    cral({
       button: {
         text: "HEPP",
         closeModal: false,
@@ -180,11 +180,11 @@ describe("loading", () => {
 
     const $button = $(`.${BUTTON}--confirm`);
 
-    expect($button.hasClass('swal-button--loading')).toBeFalsy();
+    expect($button.hasClass('cral-button--loading')).toBeFalsy();
 
     $button.click();
 
-    expect($button.hasClass('swal-button--loading')).toBeTruthy();
+    expect($button.hasClass('cral-button--loading')).toBeTruthy();
   });
 
 });
@@ -192,7 +192,7 @@ describe("loading", () => {
 describe("set class name", () => {
 
   test("sets single class name as string", async () => {
-    swal({
+    cral({
       button: {
         text: "TEST",
         closeModal: true,
@@ -205,7 +205,7 @@ describe("set class name", () => {
   });
 
   test("sets multiple class names as string", async () => {
-    swal({
+    cral({
       button: {
         text: "TEST",
         closeModal: true,
@@ -219,7 +219,7 @@ describe("set class name", () => {
   });
 
   test("sets multiple class names as array", async () => {
-    swal({
+    cral({
       button: {
         text: "TEST",
         closeModal: true,

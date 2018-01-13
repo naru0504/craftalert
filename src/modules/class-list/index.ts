@@ -8,24 +8,24 @@ export interface ClassNameList {
   [key: string]: string,
 };
 
-const OVERLAY: string = 'swal-overlay';
-const BUTTON: string = 'swal-button';
-const ICON: string = 'swal-icon';
+const OVERLAY: string = 'cral-overlay';
+const BUTTON: string = 'cral-button';
+const ICON: string = 'cral-icon';
 
 export const CLASS_NAMES: ClassNameList = {
-  MODAL: 'swal-modal',
+  MODAL: 'cral-modal',
   OVERLAY,
   SHOW_MODAL: `${OVERLAY}--show-modal`,
 
-  MODAL_TITLE: `swal-title`,
-  MODAL_TEXT: `swal-text`,
+  MODAL_TITLE: `cral-title`,
+  MODAL_TEXT: `cral-text`,
   ICON,
   ICON_CUSTOM: `${ICON}--custom`,
 
-  CONTENT: 'swal-content',
+  CONTENT: 'cral-content',
 
-  FOOTER: 'swal-footer',
-  BUTTON_CONTAINER: 'swal-button-container',
+  FOOTER: 'cral-footer',
+  BUTTON_CONTAINER: 'cral-button-container',
   BUTTON,
   CONFIRM_BUTTON: `${BUTTON}--confirm`,
   CANCEL_BUTTON: `${BUTTON}--cancel`,
