@@ -23,12 +23,12 @@
     "modal",
     "popup"
   ],
-  "author": "Tristan Edwards <tristan.edwards@me.com> (http://tristanedwards.me)",
+  "author": "Naruhito Kubota <naru.kubota@gmail.com> (https://naru.design)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/naru0504/craftalert/issues"
   },
-  "homepage": "http://tristanedwards.me/craftalert",
+  "homepage": "https://github.com/naru0504/craftalert",
   "devDependencies": {
     "@types/jest": "19.2.3",
     "autoprefixer": "6.7.7",
