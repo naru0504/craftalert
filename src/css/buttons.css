@@ -1,5 +1,5 @@
 :root {
-  --cral-btn-confirm: #7cd1f9;
+  --cral-btn-confirm: #ff9900;
   --cral-btn-confirm-hover: color(var(--cral-btn-confirm) shade(3%));
   --cral-btn-confirm-active: color(var(--cral-btn-confirm) shade(10%));
 
@@ -50,7 +50,7 @@
   &:focus {
     outline: none;
     box-shadow:
-      0px 0px 0px 1px white, 
+      0px 0px 0px 1px white,
       0px 0px 0px 3px rgba(43, 114, 165, 0.29);
   }
   &[disabled] {
@@ -72,8 +72,8 @@
       background-color: var(--cral-btn-cancel-active);
     }
     &:focus {
-      box-shadow: 
-        0px 0px 0px 1px white, 
+      box-shadow:
+        0px 0px 0px 1px white,
         0px 0px 0px 3px rgba(116, 136, 150, 0.29);
     }
   }
@@ -87,12 +87,9 @@
       background-color: var(--cral-btn-danger-active);
     }
     &:focus {
-      box-shadow: 
-        0px 0px 0px 1px white, 
+      box-shadow:
+        0px 0px 0px 1px white,
         0px 0px 0px 3px rgba(165, 43, 43, 0.29);
     }
   }
 }
-
-
-
