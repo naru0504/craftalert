@@ -8,7 +8,7 @@ module.exports = (_env, args) => {
   const IS_PROD = args.p;
 
   const BUILD_PATH = 'dist';
-  const JS_FILE_NAME = 'colorfulalert.min.js';
+  const JS_FILE_NAME = 'craftalert.min.js';
   const devtool = IS_PROD ? false : 'source-map';
 
   const plugins = [
@@ -19,15 +19,15 @@ module.exports = (_env, args) => {
   if (IS_PROD) {
     plugins.push(
       new CopyWebpackPlugin([{
-        from: 'colorfulalert.d.ts',
-        to: '../typings/colorfulalert.d.ts',
+        from: 'craftalert.d.ts',
+        to: '../typings/craftalert.d.ts',
       }])
     );
   }
 
   return {
     context: path.resolve(__dirname, 'src'),
-    entry: './colorfulalert.js',
+    entry: './craftalert.js',
     plugins,
 
     output: {
@@ -48,10 +48,10 @@ module.exports = (_env, args) => {
       rules: [
         {
           // Expose global cral() function
-          test: require.resolve("./src/colorfulalert"),
+          test: require.resolve("./src/craftalert"),
           use: [{
             loader: 'expose-loader',
-            options: 'colorfulalert'
+            options: 'craftalert'
           }, {
             loader: 'expose-loader',
             options: 'cral'

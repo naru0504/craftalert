@@ -6,24 +6,24 @@ layout: guides
 
 ## NPM/Yarn
 
-NPM combined with a tool like [Browserify](http://browserify.org) or [Webpack](https://webpack.js.org) is the recommended method of installing colorfulalert.
+NPM combined with a tool like [Browserify](http://browserify.org) or [Webpack](https://webpack.js.org) is the recommended method of installing craftalert.
 
 ```bash
-npm install colorfulalert --save
+npm install craftalert --save
 ```
 
 Then, simply import it into your application:
 
 ```javascript
-import cral from 'colorfulalert';
+import cral from 'craftalert';
 ```
 
 ## CDN
 
-You can also find colorfulalert on [unpkg](https://unpkg.com/colorfulalert) and [jsDelivr](https://cdn.jsdelivr.net/npm/colorfulalert) and use the global `cral` variable.
+You can also find craftalert on [unpkg](https://unpkg.com/craftalert) and [jsDelivr](https://cdn.jsdelivr.net/npm/craftalert) and use the global `cral` variable.
 
 ```html
-<script src="https://unpkg.com/colorfulalert/dist/colorfulalert.min.js"></script>
+<script src="https://unpkg.com/craftalert/dist/craftalert.min.js"></script>
 ```
 
 # Getting started
@@ -87,7 +87,7 @@ For a full list of all the available options, check out the [API docs](/docs)!
 
 ## Using promises
 
-colorfulalert uses [promises](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise) to keep track of how the user interacts with the alert.
+craftalert uses [promises](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Promise) to keep track of how the user interacts with the alert.
 
 If the user clicks the confirm button, the promise resolves to `true`. If the alert is dismissed (by clicking outside of it), the promise resolves to `null`.
 
@@ -101,7 +101,7 @@ cral("Click on either the button or outside the modal.")
 
 This comes in handy if you want to warn the user before they perform a dangerous action. We can make our alert even better by setting some more options:
 - `icon` can be set to the predefined `"warning"` to show a nice warning icon.
-- By setting `buttons` (plural) to `true`, colorfulalert will show a cancel button in addition to the default confirm button.
+- By setting `buttons` (plural) to `true`, craftalert will show a cancel button in addition to the default confirm button.
 - By setting `dangerMode` to `true`, the focus will automatically be set on the cancel button instead of the confirm button, and the confirm button will be red instead of blue to emphasize the dangerous action.
 
 ```js
@@ -149,14 +149,14 @@ cral("Are you sure you want to do this?", {
 ```
 <preview-button></preview-button>
 
-So what if you need *more* than just a cancel and a confirm button? Don't worry, colorfulalert's got you covered!
+So what if you need *more* than just a cancel and a confirm button? Don't worry, craftalert's got you covered!
 
 By specifying an object for `buttons`, you can set exactly as many buttons as you like, and specify the value that they resolve to when they're clicked!
 
 In the example below, we set 3 buttons:
 - `cancel`, which by default resolves to `null` and has a custom `"Run away!"` text.
 - `catch`, which will resolve to the `value` we've specified (`"catch"`) and has the custom text `"Throw Pokéball!"`.
-- `defeat`. Here, we specify `true` to let colorfulalert set some default configurations for the button. In this case, it will set the `text` to `"Defeat"` (capitalized) and the resolved value to `defeat`. Had we set the `cancel` button to `true`, it would still resolve to `null` as expected.
+- `defeat`. Here, we specify `true` to let craftalert set some default configurations for the button. In this case, it will set the `text` to `"Defeat"` (capitalized) and the resolved value to `defeat`. Had we set the `cancel` button to `true`, it would still resolve to `null` as expected.
 
 ```js
 cral("A wild Pikachu appeared! What do you want to do?", {
@@ -191,7 +191,7 @@ You can check out all the available button options in the [docs](/docs#buttons).
 
 ## AJAX requests
 
-Since colorfulalert is promise-based, it makes sense to pair it with AJAX functions that are also promise-based. Below is an example of using `fetch` to search for artists on the iTunes API. Note that we're using `content: "input"` in order to both show an input-field *and* retrieve its value when the user clicks the confirm button:
+Since craftalert is promise-based, it makes sense to pair it with AJAX functions that are also promise-based. Below is an example of using `fetch` to search for artists on the iTunes API. Note that we're using `content: "input"` in order to both show an input-field *and* retrieve its value when the user clicks the confirm button:
 
 ```js
 cral({
@@ -239,7 +239,7 @@ cral({
 
 ## Using DOM nodes as content
 
-Sometimes, you might run into a scenario where it would be nice to use the out-of-the box functionality that colorfulalert offers, but with some custom UI that goes beyond just styling buttons and text. For that, there's the `content` option.
+Sometimes, you might run into a scenario where it would be nice to use the out-of-the box functionality that craftalert offers, but with some custom UI that goes beyond just styling buttons and text. For that, there's the `content` option.
 
 In the previous example, we saw how we could set `content` to `"input"` to get an `<input />` element in our modal that changes the resolved value of the confirm button based on its value.
 `"input"` is a predefined option that exists for convenience, but you can also set `content` to any DOM node!
@@ -258,7 +258,7 @@ cral("Write something here:", {
 
 ...using a custom DOM node!
 
-We're going to use [React](https://facebook.github.io/react) here, since it's a well-known UI library that can help us understand how to create more complex colorfulalert interfaces, but you can use any library you want, as long as you can extract a DOM node from it!
+We're going to use [React](https://facebook.github.io/react) here, since it's a well-known UI library that can help us understand how to create more complex craftalert interfaces, but you can use any library you want, as long as you can extract a DOM node from it!
 
 ```js
 import React, { Component } from 'react';
@@ -325,7 +325,7 @@ cral({
 
 This might look very complex at first, but it's actually pretty simple. All we're doing is creating an input tag as a React component. We then extract its DOM node and pass it into under the `cral` function's `content` option to render it as an unstyled element.
 
-The only code that's specific to colorfulalert is the `cral.setActionValue()` and the `cral()` call at the end. The rest is just basic React and JavaScript.
+The only code that's specific to craftalert is the `cral.setActionValue()` and the `cral()` call at the end. The rest is just basic React and JavaScript.
 
 <figure align="center">
   <img src="/assets/images/modal-fb-example@2x.png" alt="Facebook modal" width="400" />
@@ -337,7 +337,7 @@ The only code that's specific to colorfulalert is the `cral.setActionValue()` an
 
 # Upgrading from 1.X
 
-colorfulalert 2.0 introduces some important breaking changes in order to make the library easier to use and more flexible.
+craftalert 2.0 introduces some important breaking changes in order to make the library easier to use and more flexible.
 
 The most important change is that callback functions have been deprecated in favour of [promises](#using-promises), and that you no longer have to import any external CSS file (since the styles are now bundled in the .js-file).
 

@@ -5,7 +5,7 @@
  */
 
 if (typeof window !== 'undefined') {
-  require('./colorfulalert.css');
+  require('./craftalert.css');
 }
 
 require('./polyfills');

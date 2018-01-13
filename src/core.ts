@@ -1,7 +1,7 @@
 /*
- * colorfulalert
+ * craftalert
  * 2014-2017 – Tristan Edwards
- * https://github.com/naru0504/colorfulalert
+ * https://github.com/naru0504/craftalert
  */
 
 import init from './modules/init';
@@ -27,7 +27,7 @@ import {
 
 export type cralParams = (string|Partial<cralOptions>)[];
 
-export interface colorfulalert {
+export interface craftalert {
   (...params: cralParams): Promise<any>,
   close? (namespace: string): void,
   getState? (): cralState,
@@ -36,7 +36,7 @@ export interface colorfulalert {
   setDefaults? (opts: object): void,
 };
 
-const cral:colorfulalert = (...args) => {
+const cral:craftalert = (...args) => {
 
   // Prevent library to be run in Node env:
   if (typeof window === 'undefined') return;

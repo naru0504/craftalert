@@ -1,7 +1,7 @@
 import { ActionOptions, cralState } from './modules/state';
 import { cralOptions } from './modules/options';
 export declare type cralParams = (string | Partial<cralOptions>)[];
-export interface colorfulalert {
+export interface craftalert {
     (...params: cralParams): Promise<any>;
     close?(namespace: string): void;
     getState?(): cralState;
@@ -9,5 +9,5 @@ export interface colorfulalert {
     stopLoading?(): void;
     setDefaults?(opts: object): void;
 }
-declare const cral: colorfulalert;
+declare const cral: craftalert;
 export default cral;

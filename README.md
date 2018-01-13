@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="http://colorfulalert.js.org">
-    <img alt="colorfulalert" src="https://github.com/naru0504/colorfulalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/logotype.png" width="300">
+  <a href="http://craftalert.js.org">
+    <img alt="craftalert" src="https://github.com/naru0504/craftalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/logotype.png" width="300">
   </a>
 </p>
 
@@ -9,51 +9,51 @@
 </p>
 
 <p align="center">
-  <a href="https://badge.fury.io/js/colorfulalert"><img src="https://badge.fury.io/js/colorfulalert.svg" alt="npm version" height="18"></a>
-  <a href="https://travis-ci.org/naru0504/colorfulalert"><img src="https://travis-ci.org/naru0504/colorfulalert.svg" alt="Build status" /><a>
-  <a href="https://www.npmjs.com/package/colorfulalert">
-    <img src="https://img.shields.io/npm/dm/colorfulalert.svg" />
+  <a href="https://badge.fury.io/js/craftalert"><img src="https://badge.fury.io/js/craftalert.svg" alt="npm version" height="18"></a>
+  <a href="https://travis-ci.org/naru0504/craftalert"><img src="https://travis-ci.org/naru0504/craftalert.svg" alt="Build status" /><a>
+  <a href="https://www.npmjs.com/package/craftalert">
+    <img src="https://img.shields.io/npm/dm/craftalert.svg" />
   </a>
-  <a href="https://github.com/naru0504/colorfulalert/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/naru0504/colorfulalert.svg" />
+  <a href="https://github.com/naru0504/craftalert/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/naru0504/craftalert.svg" />
   </a>
 </p>
 
 <p align="center">
-  <img alt="A success modal" src="https://github.com/naru0504/colorfulalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/cral.gif">
+  <img alt="A success modal" src="https://github.com/naru0504/craftalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/cral.gif">
 </p>
 
 
 ## Installation
 
 ```bash
-$ npm install --save colorfulalert
+$ npm install --save craftalert
 ```
 
 ## Usage
 
 ```javascript
-import cral from 'colorfulalert'
+import cral from 'craftalert'
 
 cral("Hello world!")
 ```
 
 ## Upgrading from 1.X
 
-Many improvements and breaking changes have been introduced in the 2.0 release. Make sure you read the [upgrade guide](https://colorfulalert.js.org/guides/#upgrading-from-1x) to avoid nasty suprises!
+Many improvements and breaking changes have been introduced in the 2.0 release. Make sure you read the [upgrade guide](https://craftalert.js.org/guides/#upgrading-from-1x) to avoid nasty suprises!
 
 ## Guides
 
-- [Installation](https://colorfulalert.js.org/guides/#installation)
-- [Getting started](https://colorfulalert.js.org/guides/#getting-started)
-- [Advanced examples](https://colorfulalert.js.org/guides/#advanced-examples)
-- [Upgrading from 1.X](https://colorfulalert.js.org/guides/#upgrading-from-1x)
+- [Installation](https://craftalert.js.org/guides/#installation)
+- [Getting started](https://craftalert.js.org/guides/#getting-started)
+- [Advanced examples](https://craftalert.js.org/guides/#advanced-examples)
+- [Upgrading from 1.X](https://craftalert.js.org/guides/#upgrading-from-1x)
 
 ## Documentation
 
-- [Configuration](https://colorfulalert.js.org/docs/#configuration)
-- [Methods](https://colorfulalert.js.org/docs/#methods)
-- [Theming](https://colorfulalert.js.org/docs/#theming)
+- [Configuration](https://craftalert.js.org/docs/#configuration)
+- [Methods](https://craftalert.js.org/docs/#methods)
+- [Theming](https://craftalert.js.org/docs/#theming)
 
 ## Examples
 

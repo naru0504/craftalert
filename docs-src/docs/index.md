@@ -50,7 +50,7 @@ layout: docs
 
   **Description:**
 
-  An icon for the modal. colorfulalert comes with 4 built-in icons that you can use:
+  An icon for the modal. craftalert comes with 4 built-in icons that you can use:
 
   - `"warning"`
   - `"error"`
@@ -243,7 +243,7 @@ layout: docs
 
   **Description**:
 
-  Add a custom class to the colorfulalert modal. This is handy for changing the appearance.
+  Add a custom class to the craftalert modal. This is handy for changing the appearance.
 
   **Example**:
 
@@ -339,8 +339,8 @@ layout: docs
 
 | Name | Description | Example |
 | ---- | ----------- | ------- |
-| `close` | Closes the currently open colorfulalert, as if you pressed the cancel button. | `cral.close()` |
-| `getState` | Get the state of the current colorfulalert modal. | `cral.getState()` |
+| `close` | Closes the currently open craftalert, as if you pressed the cancel button. | `cral.close()` |
+| `getState` | Get the state of the current craftalert modal. | `cral.getState()` |
 | `setActionValue` | Change the promised value of one of the modal's buttons. You can either pass in just a string (by default it changes the value of the confirm button), or an object. | `cral.setActionValue({ confirm: 'Text from input' })` |
 | `stopLoading` | Removes all loading states on the modal's buttons. Use it in combination with the button option `closeModal: false`. | `cral.stopLoading()`
 

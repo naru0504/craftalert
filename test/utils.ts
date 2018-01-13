@@ -1,4 +1,4 @@
-export const cral = require('../dist/colorfulalert.min');
+export const cral = require('../dist/craftalert.min');
 
 export const $ = require('jquery');
 

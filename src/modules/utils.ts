@@ -30,7 +30,7 @@ export const throwErr = (message: string) => {
   message = message.replace(/ +(?= )/g,'');
   message = message.trim();
 
-  throw `colorfulalert: ${message}`;
+  throw `craftalert: ${message}`;
 };
 
 /*

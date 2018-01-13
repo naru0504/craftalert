@@ -21,7 +21,7 @@ export const init = (opts: cralOptions): void => {
 
   if (!modal) {
     if (!document.body) {
-      throwErr("You can only use colorfulalert AFTER the DOM has loaded!");
+      throwErr("You can only use craftalert AFTER the DOM has loaded!");
     }
 
     initOverlayOnce();
