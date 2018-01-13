@@ -1,9 +1,9 @@
 {
-  "name": "sweetalert",
+  "name": "colorfulalert",
   "version": "2.1.0",
   "description": "A beautiful replacement for JavaScript's \"alert\"",
-  "main": "dist/sweetalert.min.js",
-  "types": "typings/sweetalert.d.ts",
+  "main": "dist/colorfulalert.min.js",
+  "types": "typings/colorfulalert.d.ts",
   "scripts": {
     "build": "node_modules/.bin/webpack -p",
     "buildtest": "npm run build && jest",
@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/t4t5/sweetalert"
+    "url": "https://github.com/t4t5/colorfulalert"
   },
   "keywords": [
-    "sweetalert",
+    "colorfulalert",
     "alert",
     "modal",
     "popup"
@@ -26,9 +26,9 @@
   "author": "Tristan Edwards <tristan.edwards@me.com> (http://tristanedwards.me)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/t4t5/sweetalert/issues"
+    "url": "https://github.com/t4t5/colorfulalert/issues"
   },
-  "homepage": "http://tristanedwards.me/sweetalert",
+  "homepage": "http://tristanedwards.me/colorfulalert",
   "devDependencies": {
     "@types/jest": "19.2.3",
     "autoprefixer": "6.7.7",

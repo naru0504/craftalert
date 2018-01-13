@@ -1,5 +1,5 @@
 /*
- * A list of all the deprecated options from SweetAlert 1.X
+ * A list of all the deprecated options from colorfulalert 1.X
  * These should log a warning telling users how to upgrade.
  */
 
@@ -9,14 +9,14 @@ export const logDeprecation = (name: string): void => {
 
   const destiny = (onlyRename) ? 'renamed' : 'deprecated';
 
-  let message = `SweetAlert warning: "${name}" option has been ${destiny}.`;
+  let message = `colorfulalert warning: "${name}" option has been ${destiny}.`;
 
   if (replacement) {
     const subOptionText = (subOption) ? ` "${subOption}" in ` : ' ';
     message += ` Please use${subOptionText}"${replacement}" instead.`;
   }
 
-  const DOMAIN = 'https://sweetalert.js.org';
+  const DOMAIN = 'https://colorfulalert.js.org';
 
   if (link) {
     message += ` More details: ${DOMAIN}${link}`;

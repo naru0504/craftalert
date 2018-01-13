@@ -1,7 +1,7 @@
 /*
- * SweetAlert
+ * colorfulalert
  * 2014-2017 – Tristan Edwards
- * https://github.com/t4t5/sweetalert
+ * https://github.com/t4t5/colorfulalert
  */
 
 import init from './modules/init';
@@ -27,7 +27,7 @@ import {
 
 export type cralParams = (string|Partial<cralOptions>)[];
 
-export interface SweetAlert {
+export interface colorfulalert {
   (...params: cralParams): Promise<any>,
   close? (namespace: string): void,
   getState? (): cralState,
@@ -36,7 +36,7 @@ export interface SweetAlert {
   setDefaults? (opts: object): void,
 };
 
-const cral:SweetAlert = (...args) => {
+const cral:colorfulalert = (...args) => {
 
   // Prevent library to be run in Node env:
   if (typeof window === 'undefined') return;

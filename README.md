@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="http://sweetalert.js.org">
-    <img alt="SweetAlert" src="https://github.com/t4t5/sweetalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/logotype.png" width="300">
+  <a href="http://colorfulalert.js.org">
+    <img alt="colorfulalert" src="https://github.com/t4t5/colorfulalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/logotype.png" width="300">
   </a>
 </p>
 
@@ -9,51 +9,51 @@
 </p>
 
 <p align="center">
-  <a href="https://badge.fury.io/js/sweetalert"><img src="https://badge.fury.io/js/sweetalert.svg" alt="npm version" height="18"></a>
-  <a href="https://travis-ci.org/t4t5/sweetalert"><img src="https://travis-ci.org/t4t5/sweetalert.svg" alt="Build status" /><a>
-  <a href="https://www.npmjs.com/package/sweetalert">
-    <img src="https://img.shields.io/npm/dm/sweetalert.svg" />
+  <a href="https://badge.fury.io/js/colorfulalert"><img src="https://badge.fury.io/js/colorfulalert.svg" alt="npm version" height="18"></a>
+  <a href="https://travis-ci.org/t4t5/colorfulalert"><img src="https://travis-ci.org/t4t5/colorfulalert.svg" alt="Build status" /><a>
+  <a href="https://www.npmjs.com/package/colorfulalert">
+    <img src="https://img.shields.io/npm/dm/colorfulalert.svg" />
   </a>
-  <a href="https://github.com/t4t5/sweetalert/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/t4t5/sweetalert.svg" />
+  <a href="https://github.com/t4t5/colorfulalert/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/t4t5/colorfulalert.svg" />
   </a>
 </p>
 
 <p align="center">
-  <img alt="A success modal" src="https://github.com/t4t5/sweetalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/cral.gif">
+  <img alt="A success modal" src="https://github.com/t4t5/colorfulalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/cral.gif">
 </p>
 
 
 ## Installation
 
 ```bash
-$ npm install --save sweetalert
+$ npm install --save colorfulalert
 ```
 
 ## Usage
 
 ```javascript
-import cral from 'sweetalert'
+import cral from 'colorfulalert'
 
 cral("Hello world!")
 ```
 
 ## Upgrading from 1.X
 
-Many improvements and breaking changes have been introduced in the 2.0 release. Make sure you read the [upgrade guide](https://sweetalert.js.org/guides/#upgrading-from-1x) to avoid nasty suprises!
+Many improvements and breaking changes have been introduced in the 2.0 release. Make sure you read the [upgrade guide](https://colorfulalert.js.org/guides/#upgrading-from-1x) to avoid nasty suprises!
 
 ## Guides
 
-- [Installation](https://sweetalert.js.org/guides/#installation)
-- [Getting started](https://sweetalert.js.org/guides/#getting-started)
-- [Advanced examples](https://sweetalert.js.org/guides/#advanced-examples)
-- [Upgrading from 1.X](https://sweetalert.js.org/guides/#upgrading-from-1x)
+- [Installation](https://colorfulalert.js.org/guides/#installation)
+- [Getting started](https://colorfulalert.js.org/guides/#getting-started)
+- [Advanced examples](https://colorfulalert.js.org/guides/#advanced-examples)
+- [Upgrading from 1.X](https://colorfulalert.js.org/guides/#upgrading-from-1x)
 
 ## Documentation
 
-- [Configuration](https://sweetalert.js.org/docs/#configuration)
-- [Methods](https://sweetalert.js.org/docs/#methods)
-- [Theming](https://sweetalert.js.org/docs/#theming)
+- [Configuration](https://colorfulalert.js.org/docs/#configuration)
+- [Methods](https://colorfulalert.js.org/docs/#methods)
+- [Theming](https://colorfulalert.js.org/docs/#theming)
 
 ## Examples
 

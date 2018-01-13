@@ -38,7 +38,7 @@
       opacity: 1;
       pointer-events: auto;
       box-sizing: border-box;
-      animation: showSweetAlert 0.3s;
+      animation: showcolorfulalert 0.3s;
       will-change: transform;
     }
   }
@@ -67,7 +67,7 @@
   }
 }
 
-@keyframes showSweetAlert {
+@keyframes showcolorfulalert {
   0% {
     transform: scale(1);
   }
